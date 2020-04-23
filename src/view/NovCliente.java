@@ -18,6 +18,7 @@ import javax.swing.JButton;
 
 public class NovCliente extends JFrame {
 
+	protected static final int YES_NO_OPTION = 0;
 	private JPanel contentPane;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -26,18 +27,7 @@ public class NovCliente extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					NovCliente frame = new NovCliente();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -165,8 +155,13 @@ public class NovCliente extends JFrame {
 		JButton btnCadastrar = new JButton("Excluir");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Estacionamento().setVisible(true);
-				dispose();
+				int opc=JOptionPane.showConfirmDialog(null, "Tem certeza que deseja excluir o cadastro?", "Confirmação", YES_NO_OPTION);
+				if(opc==0) {
+					JOptionPane.showMessageDialog(null,"Cadastro excluído com sucesso!");
+					new Estacionamento().setVisible(true);
+					dispose();}
+				
+				
 			}
 		});
 		btnCadastrar.setBounds(243, 189, 114, 25);
@@ -180,6 +175,7 @@ public class NovCliente extends JFrame {
 		JButton button = new JButton("Salvar");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null,"Usuário editado com sucesso!");
 				new Estacionamento().setVisible(true);
 				dispose();
 			}

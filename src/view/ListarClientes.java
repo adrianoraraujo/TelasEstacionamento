@@ -11,6 +11,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JList;
 import javax.swing.JComboBox;
@@ -25,18 +26,7 @@ public class ListarClientes extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ListarClientes frame = new ListarClientes();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -139,11 +129,11 @@ public class ListarClientes extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JComboBox comboBox = new JComboBox();
+		JTextField comboBox = new JTextField();
 		comboBox.setBounds(68, 37, 292, 24);
 		panel.add(comboBox);
 		
-		JLabel lblSelecioneOCliente = new JLabel("Selecione o Cliente");
+		JLabel lblSelecioneOCliente = new JLabel("Digite a Placa");
 		lblSelecioneOCliente.setBounds(68, 12, 193, 15);
 		panel.add(lblSelecioneOCliente);
 		
@@ -154,7 +144,7 @@ public class ListarClientes extends JFrame {
 				dispose();
 			}
 		});
-		btnConfirmar.setBounds(147, 124, 114, 25);
+		btnConfirmar.setBounds(153, 124, 114, 25);
 		panel.add(btnConfirmar);
 	}
 }

@@ -20,22 +20,12 @@ public class PagarMensal extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
+	String valorMensal="R$ 80,00";
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PagarMensal frame = new PagarMensal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -150,7 +140,7 @@ public class PagarMensal extends JFrame {
 		lblValor.setBounds(12, 91, 66, 15);
 		panel.add(lblValor);
 		
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel(valorMensal);
 		lblNewLabel.setBounds(114, 91, 66, 15);
 		panel.add(lblNewLabel);
 		

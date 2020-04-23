@@ -29,18 +29,7 @@ public class Entrada extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Entrada frame = new Entrada();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -139,11 +128,11 @@ public class Entrada extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblPlaca = new JLabel("Placa");
-		lblPlaca.setBounds(12, 60, 66, 17);
+		lblPlaca.setBounds(34, 60, 66, 17);
 		panel.add(lblPlaca);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(137, 58, 226, 19);
+		textField_1.setBounds(101, 59, 226, 19);
 		panel.add(textField_1);
 		textField_1.setColumns(10);
 		
@@ -156,7 +145,7 @@ public class Entrada extends JFrame {
 		
 		
 		JLabel lblEntradaNoEstacionamento = new JLabel("Entrada no Estacionamento");
-		lblEntradaNoEstacionamento.setBounds(108, 12, 224, 15);
+		lblEntradaNoEstacionamento.setBounds(115, 12, 224, 15);
 		panel.add(lblEntradaNoEstacionamento);
 		
 		JButton btnConfirmar = new JButton("Confirmar");
@@ -167,7 +156,7 @@ public class Entrada extends JFrame {
 				dispose();
 			}
 		});
-		btnConfirmar.setBounds(167, 173, 114, 25);
+		btnConfirmar.setBounds(160, 173, 114, 25);
 		panel.add(btnConfirmar);
 		
 		

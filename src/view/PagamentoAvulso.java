@@ -24,24 +24,13 @@ public class PagamentoAvulso extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	String valor = "Defina pra aparecer aqui";
-	String numeroPlaca = "Tem que aparecer o número da placa";
+	String valor = "R$ 5,00";
+	String numeroPlaca = "PPP3342";
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PagamentoAvulso frame = new PagamentoAvulso();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -153,18 +142,18 @@ public class PagamentoAvulso extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblPlaca = new JLabel("Placa");
-		lblPlaca.setBounds(12, 60, 66, 17);
+		lblPlaca.setBounds(34, 60, 66, 17);
 		panel.add(lblPlaca);
 		JLabel lblnPlaca = new JLabel(numeroPlaca);
-		lblnPlaca.setBounds(137, 58, 226, 19);
+		lblnPlaca.setBounds(101, 59, 226, 19);
 		panel.add(lblnPlaca);
 		
-		JLabel label = new JLabel("");
-		label.setBounds(12, 115, 124, 15);
+		JLabel label = new JLabel("Valor");
+		label.setBounds(34, 125, 66, 17);
 		panel.add(label);
 		
 		JLabel lblvalor = new JLabel(valor);
-		lblvalor.setBounds(137, 125, 144, 23);
+		lblvalor.setBounds(101, 125, 226, 19);
 		panel.add(lblvalor);
 		
 		JLabel lblMensalista = new JLabel("");
@@ -172,7 +161,7 @@ public class PagamentoAvulso extends JFrame {
 		panel.add(lblMensalista);
 		
 		JLabel lblEntradaNoEstacionamento = new JLabel("Pagamento Avulso");
-		lblEntradaNoEstacionamento.setBounds(108, 12, 224, 15);
+		lblEntradaNoEstacionamento.setBounds(115, 12, 224, 15);
 		panel.add(lblEntradaNoEstacionamento);
 		
 		JButton btnConfirmar = new JButton("Pagar e Sair");
@@ -183,6 +172,6 @@ public class PagamentoAvulso extends JFrame {
 				dispose();
 			}
 		});
-		btnConfirmar.setBounds(167, 173, 150, 25);
+		btnConfirmar.setBounds(160, 173, 150, 25);
 		panel.add(btnConfirmar);
 	}}
